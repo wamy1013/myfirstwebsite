@@ -64,6 +64,48 @@
     margin: 10px 0;
   }
 }
+/* Dark Mode Toggle Button */
+.dark-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.dark-toggle:hover {
+  background-color: #f0f0f0;
+}
+
+/* DARK MODE STYLES */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark .navbar {
+  background-color: #222;
+}
+
+body.dark .nav-links a {
+  color: #ccc;
+}
+
+body.dark .nav-links a:hover {
+  color: #ffb74d;
+}
+
+body.dark .dark-toggle {
+  background-color: #333;
+  color: #fff;
+}
 
 
     img {
@@ -112,6 +154,8 @@
   </div>
 </div>
 
+  <button id="toggle-dark" class="dark-toggle">🌙</button>
+
   <h1>Hello, World!</h1>
   <p>Welcome to my first website with images and links.</p>
 
@@ -120,5 +164,18 @@
 
   <a href="https://github.com" target="_blank">Visit GitHub</a>
   <a href="about.html">About Me</a>
+
+  <script>
+  const toggle = document.getElementById('toggle-dark');
+  const body = document.body;
+
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark');
+
+    // Toggle icon emoji
+    toggle.textContent = body.classList.contains('dark') ? '🌞' : '🌙';
+  });
+</script>
+
 </body>
 </html>
