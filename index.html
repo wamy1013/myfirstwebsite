@@ -15,6 +15,12 @@
       padding: 50px;
     }
 
+    /* Smooth transition for background and text */
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
     /* Navbar */
 .navbar {
   display: flex;
@@ -78,6 +84,26 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   z-index: 1001;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Bounce effect on click */
+.dark-toggle.clicked {
+  animation: bounce 0.4s ease;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Bounce Keyframe */
+@keyframes bounce {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.2); }
+  60% { transform: scale(0.95); }
+  100% { transform: scale(1); }
 }
 
 .dark-toggle:hover {
@@ -165,15 +191,19 @@ body.dark .dark-toggle {
   <a href="https://github.com" target="_blank">Visit GitHub</a>
   <a href="about.html">About Me</a>
 
-  <script>
+ <script>
   const toggle = document.getElementById('toggle-dark');
   const body = document.body;
 
   toggle.addEventListener('click', () => {
     body.classList.toggle('dark');
-
-    // Toggle icon emoji
     toggle.textContent = body.classList.contains('dark') ? '🌞' : '🌙';
+
+    // Trigger bounce animation
+    toggle.classList.add('clicked');
+    setTimeout(() => {
+      toggle.classList.remove('clicked');
+    }, 400); // Match bounce animation duration
   });
 </script>
 
