@@ -1,211 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My First Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>About John | Front-End Developer</title>
+  <meta name="description" content="Learn more about John, a self-taught front-end web developer focused on HTML, CSS, and clean design." />
+  <meta name="keywords" content="about John, front-end developer, web designer, HTML CSS portfolio" />
+  <meta name="author" content="John Doe" />
+  <meta name="robots" content="index, follow" />
 
-  <style>
-    body {
-      background-color: #fafafa;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      padding: 50px;
-    }
+  <!-- Open Graph -->
+  <meta property="og:title" content="About John | Web Developer" />
+  <meta property="og:description" content="Learn more about John, a self-taught front-end developer focused on HTML and CSS." />
+  <meta property="og:image" content="https://wamy1013.github.io/myfirstwebsite/social-preview.png" />
+  <meta property="og:url" content="https://wamy1013.github.io/myfirstwebsite/index.html" />
+  <meta property="og:type" content="website" />
 
-    /* Smooth transition for background and text */
-body {
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About John | Web Developer" />
+  <meta name="twitter:description" content="Learn more about John, a self-taught front-end developer focused on HTML and CSS." />
+  <meta name="twitter:image" content="https://wamy1013.github.io/myfirstwebsite/social-preview.png" />
 
-
-    /* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #007bff;
-  padding: 15px 30px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-  font-size: 24px;
-  color: #fff;
-  font-weight: bold;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #ffe082;
-}
-
-/* Responsive: Stack links on small screens */
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .nav-links a {
-    margin: 10px 0;
-  }
-}
-/* Dark Mode Toggle Button */
-.dark-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: #fff;
-  border: none;
-  border-radius: 50%;
-  padding: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-  z-index: 1001;
-  animation: fadeIn 0.5s ease-out;
-}
-
-/* Bounce effect on click */
-.dark-toggle.clicked {
-  animation: bounce 0.4s ease;
-}
-
-/* Fade In Animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-/* Bounce Keyframe */
-@keyframes bounce {
-  0% { transform: scale(1); }
-  30% { transform: scale(1.2); }
-  60% { transform: scale(0.95); }
-  100% { transform: scale(1); }
-}
-
-.dark-toggle:hover {
-  background-color: #f0f0f0;
-}
-
-/* DARK MODE STYLES */
-body.dark {
-  background-color: #121212;
-  color: #eee;
-}
-
-body.dark .navbar {
-  background-color: #222;
-}
-
-body.dark .nav-links a {
-  color: #ccc;
-}
-
-body.dark .nav-links a:hover {
-  color: #ffb74d;
-}
-
-body.dark .dark-toggle {
-  background-color: #333;
-  color: #fff;
-}
-
-
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    a {
-      color: #007bff;
-      text-decoration: none;
-      font-size: 18px;
-      margin: 0 10px;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 20px;
-        font-size: 16px;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      a {
-        display: block;
-        margin: 10px 0;
-      }
-    }
-  </style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<div class="navbar">
-  <div class="logo">MyWebsite</div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="https://github.com" target="_blank">GitHub</a>
+  <div class="navbar">
+    <div class="logo">John's Site</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </div>
   </div>
-</div>
 
-  <button id="toggle-dark" class="dark-toggle">🌙</button>
+  <main>
+    <h1>About Me</h1>
+    <p>Hi! I'm John Doe, a self-taught front-end web developer who loves building clean, mobile-friendly, and SEO-optimized websites. I specialize in HTML, CSS, and bringing dark mode to life! This site is hosted on GitHub Pages as a portfolio and learning tool.</p>
+    <img src="john-photo.png" alt="John Doe smiling in front of a laptop" />
+  </main>
 
-  <h1>Hello, World!</h1>
-  <p>Welcome to my first website with images and links.</p>
-
-  
-  <img src="logo.png" alt="Me smiling" width="100"><br><br>
-
-  <a href="https://github.com" target="_blank">Visit GitHub</a>
-  <a href="about.html">About Me</a>
-
- <script>
-  const toggle = document.getElementById('toggle-dark');
-  const body = document.body;
-
-  toggle.addEventListener('click', () => {
-    body.classList.toggle('dark');
-    toggle.textContent = body.classList.contains('dark') ? '🌞' : '🌙';
-
-    // Trigger bounce animation
-    toggle.classList.add('clicked');
-    setTimeout(() => {
-      toggle.classList.remove('clicked');
-    }, 400); // Match bounce animation duration
-  });
-</script>
-
+  <footer>
+    <p>Contact: johndoe@example.com</p>
+  </footer>
 </body>
 </html>
