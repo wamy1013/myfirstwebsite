@@ -1,132 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "What is the return policy?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "You can return any item within 30 days of purchase."
-    }
-  }, {
-    "@type": "Question",
-    "name": "Do you offer international shipping?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes, we ship to over 50 countries worldwide."
-    }
-  }]
-}
-</script>
-
-
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>About John | Self-Taught Front-End Developer</title>
-  <meta name="description" content="Learn more about John, a self-taught front-end developer who builds modern, responsive websites using HTML, CSS, and GitHub Pages." />
-  <meta name="keywords" content="self-taught front-end developer, web developer GitHub, HTML CSS portfolio" />
-  <meta name="author" content="John Doe" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="About John | Self-Taught Front-End Developer" />
-  <meta property="og:description" content="Learn more about John, a self-taught front-end developer who builds clean, mobile-first websites." />
-  <meta property="og:image" content="https://yourusername.github.io/social-preview.png" />
-  <meta property="og:url" content="https://yourusername.github.io/about.html" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About John | Front-End Developer" />
-  <meta name="twitter:description" content="John is a self-taught front-end developer focused on clean design and fast websites." />
-  <meta name="twitter:image" content="https://yourusername.github.io/images/social-preview.jpg" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <title>About Me</title>
+  <meta name="description" content="Learn more about me as a self-taught front-end developer." />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How did you learn front-end development?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "I taught myself using free online resources like YouTube, freeCodeCamp, and by building real projects."
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is your background?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I am a self-taught front-end developer who learned by building projects and using free online resources."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What technologies do you use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I use HTML, CSS, JavaScript, GitHub Pages, and SEO tools like Google Search Console."
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "What tools do you use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "I use Visual Studio Code, GitHub, HTML, CSS, and SEO tools like Google Search Console."
-      }
-    }
-  ]
-}
-</script>
- 
+    ]
+  }
+  </script>
 </head>
 <body>
-  <div class="navbar">
-    <div class="logo">John's Site</div>
-    <div class="nav-links">
+  <header>
+    <h1>About Me</h1>
+    <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-    </div>
-  </div>
+    </nav>
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+  </header>
 
   <main>
-    <h1>About Me – A Self-Taught Front-End Developer</h1>
-
-    <p>Hello! I'm <strong>John</strong>, a self-taught front-end developer based on GitHub Pages. I specialize in building modern, responsive websites using <strong>HTML</strong>, <strong>CSS</strong>, and clean UI design.</p>
-
-    <h2>My Journey</h2>
-    <p>I started learning web development from scratch, using free online resources and building small projects to grow my skills. I’ve never taken a formal course — everything you see here was self-taught and built from the ground up.</p>
-
-    <h2>What I Build</h2>
-    <ul>
-      <li>Responsive websites using HTML & CSS</li>
-      <li>Dark mode toggles with JavaScript</li>
-      <li>SEO-friendly personal portfolios hosted on GitHub Pages</li>
-    </ul>
-
-    <h2>Why This Site</h2>
-    <p>This portfolio serves two goals: to showcase my projects and to help other beginners see what’s possible through self-learning.</p>
-
-    <h2>Connect with Me</h2>
-    <p>Email: johndoe@example.com</p>
-    <p><a href="index.html">← Back to Home</a></p>
-
-    <img src="john-photo.png" alt="John, a self-taught front-end developer coding at a desk" width="500" />
+    <p>Hello! I'm a self-taught front-end developer passionate about creating clean and responsive websites.</p>
   </main>
 
-  <footer>
-    <p>© 2025 John Doe. Built with 💻 and ☕.</p>
-  </footer>
-<section id="faq">
-  <h2>Frequently Asked Questions</h2>
-  <div>
-    <h3>How did you learn front-end development?</h3>
-    <p>I taught myself using free online resources like YouTube, freeCodeCamp, and by building real projects.</p>
-  </div>
-  <div>
-    <h3>What tools do you use?</h3>
-    <p>I use Visual Studio Code, GitHub, HTML, CSS, and SEO tools like Google Search Console.</p>
-  </div>
-</section>
-
- 
+  <script>
+    // Dark mode toggle
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
 </body>
 </html>
