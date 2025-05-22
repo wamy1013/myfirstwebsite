@@ -1,59 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="-LbnkeUtLCf6rP02a3g8zdLpPzG46Gt-vX8xL3ROB_U" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
-  <title>About John | Front-End Developer</title>
-  <meta name="description" content="Learn more about John, a self-taught front-end web developer focused on HTML, CSS, and clean design." />
-  <meta name="keywords" content="about John, front-end developer, web designer, HTML CSS portfolio" />
-  <meta name="author" content="John Doe" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="About John | Web Developer" />
-  <meta property="og:description" content="Learn more about John, a self-taught front-end developer focused on HTML and CSS." />
-  <meta property="og:image" content="https://wamy1013.github.io/myfirstwebsite/social-preview.png" />
-  <meta property="og:url" content="https://wamy1013.github.io/myfirstwebsite/index.html" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About John | Web Developer" />
-  <meta name="twitter:description" content="Learn more about John, a self-taught front-end developer focused on HTML and CSS." />
-  <meta name="twitter:image" content="https://wamy1013.github.io/myfirstwebsite/social-preview.png" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="I'm a self-taught front-end developer sharing my journey, projects, and tutorials." />
+  <meta name="keywords" content="Frontend Developer, Web Development, HTML, CSS, JavaScript, Portfolio, SEO" />
+  <meta name="author" content="Wamy1013" />
+  <title>Wamy1013 | Front-End Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Wamy1013 Portfolio",
+      "url": "https://wamy1013.github.io/myfirstwebsite/",
+      "author": {
+        "@type": "Person",
+        "name": "Wamy1013"
+      },
+      "description": "A portfolio site of a self-taught front-end developer with projects and blog tutorials."
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #f8f8f8;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+    .dark-mode nav a {
+      color: #eee;
+    }
+    .toggle-btn {
+      cursor: pointer;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+    }
+    .toggle-btn:hover {
+      transform: scale(1.05);
+    }
+    .container {
+      padding: 2rem;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 1rem 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="navbar">
-    <div class="logo">John's Site</div>
-    <div class="nav-links">
+  <header>
+    <h1>Wamy1013</h1>
+    <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-    </div>
-  </div>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙</button>
+  </header>
 
-    <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="projects.html">Projects</a> <!-- Add this line -->
-  <a href="blog.html">Blog</a>
-</nav>
-
-
-  <main>
-    <h1>About Me</h1>
-    <p>Hi! I'm John Doe, a self-taught front-end web developer who loves building clean, mobile-friendly, and SEO-optimized websites. I specialize in HTML, CSS, and bringing dark mode to life! This site is hosted on GitHub Pages as a portfolio and learning tool.</p>
-    <img src="john-photo.png" alt="John Doe smiling in front of a laptop" />
+  <main class="container">
+    <h2>Hi, I'm a Front-End Developer</h2>
+    <p>Welcome to my personal website where I share my coding journey, showcase my projects, and publish tutorials that help beginners learn frontend development effectively.</p>
   </main>
 
-  <footer>
-    <p>Contact: johndoe@example.com</p>
+  <footer class="container">
+    <p>&copy; 2025 Wamy1013. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
